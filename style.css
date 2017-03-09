@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background: linear-gradient(to right, #282E42, #525985);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+body:before {
+  content: '';
+  width: 800px;
+  height: 600px;
+  background: #F4F3F3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.calculator {
+  width: 300px;
+  background: #383A54;
+  margin: 0 auto;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 20px;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -62%);
+}
+
+.display {
+  background: #FD3A5E;
+  padding: 23px 28px;
+  height: 80px;
+  text-align: right;
+  font-size: 32px;
+  color: #F4F3F3;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.display::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.buttons button {
+  float: right;
+  border: none;
+  color: #FD3A5E;
+  padding: 15px 10px;
+  outline: none;
+  focus: none;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  background: transparent;
+}
+
+.buttons button:hover {
+  background: #2c2e43;
+  border-radius: 5px;
+}
+
+.buttons button:active, .buttons button.active {
+  background: #2c2e43;
+}
+
+.buttons::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.buttons .numbers {
+  float: left;
+  width: 75%;
+  padding: 10px;
+}
+
+.buttons .numbers button {
+  width: 33.3333%;
+  padding: 18px 10px;
+  font-size: larger;
+}
+
+.buttons .operators {
+  float: right;
+  width: 25%;
+  padding: 16px 10px 10px;
+  background: rgba(0, 0, 0, 0.1);
+  min-height: 260px;
+}
+
+.buttons .operators button {
+  width: 100%;
+  padding: 11px 10px;
+}
+
+.buttons .operators button[data-value="*"],
+.buttons .operators button[data-value="-"],
+.buttons .operators button[data-value="/"],
+.buttons .operators button[data-value="+"],
+.buttons .operators button[data-value="="] {
+  font-size: larger;
+  color: #F4F3F3;
+}

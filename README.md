@@ -6,8 +6,8 @@ The JavaScript Calculator is a simple app that is a part of the Free Code Camp a
 
 ##Features
 
-+Can add, subtract, multiply and divide two or more numbers
-+Can clear the display field with a clear button
++ Can add, subtract, multiply and divide two or more numbers
++ Can clear the display field with a clear button
 
 
 *Screenshot:*
